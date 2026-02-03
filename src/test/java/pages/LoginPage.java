@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import utils.ConfigReader;
 
 public class LoginPage {
 
@@ -19,7 +20,7 @@ public class LoginPage {
     }
 
     public void navigateToLogin() {
-        page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        page.navigate(ConfigReader.get("baseURL"));
     }
 
     public void enterUsername(String username) {
