@@ -9,6 +9,6 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"pretty", "html:target/cucumber-report.html"}
 )
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class OrangeHRMRunner extends AbstractTestNGCucumberTests {
 
 }

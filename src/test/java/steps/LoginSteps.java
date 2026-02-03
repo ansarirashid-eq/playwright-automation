@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 import com.microsoft.playwright.Page;
 import org.testng.Assert;
 import pages.LoginPage;
+import utils.ConfigReader;
 
 public class LoginSteps {
 
@@ -22,8 +23,10 @@ public class LoginSteps {
 
     @When("i enter valid username and valid password")
     public void iEnterValidUsernameAndValidPassword() {
-        loginPage.enterUsername("Admin");
-        loginPage.enterPassword("admin123");
+        String user = ConfigReader.get("validUsername");
+        String pass = ConfigReader.get("validPassword");
+        loginPage.enterUsername(user);
+        loginPage.enterPassword(pass);
     }
 
     @And("i click the login button")
@@ -46,8 +49,10 @@ public class LoginSteps {
 
     @When("i enter invalid user name or invalid password")
     public void iEnterInvalidUserNameOrInvalidPassword() {
-        loginPage.enterUsername("Admin");
-        loginPage.enterPassword("admin");
+        String user = ConfigReader.get("validUsername");
+        String pass = ConfigReader.get("invalidPassword");
+        loginPage.enterUsername(user);
+        loginPage.enterPassword(pass);
     }
 
     @Then("i should see the error message")
