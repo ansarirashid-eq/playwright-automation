@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Cucumber-TestRunner-Local" type="TestNG">
-    <module name="FirstAutomation" />
+    <module name="playwright-automation" />
     <shortenClasspath name="NONE" />
     <useClassPathOnly />
     <extension name="coverage">
